@@ -1,30 +1,52 @@
 const Questions = [{
     id: 0,
-    q: "What is capital of India?",
-    a: [{ text: "gandhinagar", isCorrect: false },
-        { text: "Surat", isCorrect: false },
-        { text: "Delhi", isCorrect: true },
-        { text: "mumbai", isCorrect: false }
+    q: "Commonly used data types DO NOT include?",
+    a: [{ text: "strings", isCorrect: false },
+        { text: "booleans", isCorrect: false },
+        { text: "alerts", isCorrect: true },
+        { text: "numbers", isCorrect: false }
     ]
 
 },
 {
     id: 1,
-    q: "What is the capital of Thailand?",
-    a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-        { text: "phuket", isCorrect: false },
-        { text: "Ayutthaya", isCorrect: false },
-        { text: "Bangkok", isCorrect: true }
+    q: "The condition in an if/else statement is enclosed with    ?",
+    a: [{ text: "quotes", isCorrect: false, isSelected: false },
+        { text: "curly brackets", isCorrect: false },
+        { text: "parenthesis", isCorrect: true },
+        { text: "square brackets", isCorrect: false }
     ]
 
 },
 {
     id: 2,
-    q: "What is the capital of Gujarat",
-    a: [{ text: "surat", isCorrect: false },
-        { text: "vadodara", isCorrect: false },
-        { text: "gandhinagar", isCorrect: true },
-        { text: "rajkot", isCorrect: false }
+    q: "Arrays in Javascript can be used to store",
+    a: [{ text: "numbers and strings", isCorrect: false },
+        { text: "other arrays", isCorrect: false },
+        { text: "booleans", isCorrect: false },
+        { text: "all of the above", isCorrect: true }
+    ]
+
+},
+
+{
+    id: 3,
+    q: "String values must be enclosed within     when being assigned to variables",
+    a: [{ text: "parenthesis", isCorrect: false },
+        { text: "quotes", isCorrect: false },
+        { text: "commas", isCorrect: false },
+        { text: "curly brackets", isCorrect: true }
+    ]
+
+},
+
+{
+    id: 4,
+    q: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    a: [{ text: "JavaScripts", isCorrect: false },
+        { text: "terminal/bash", isCorrect: false },
+        { text: "for loops", isCorrect: false },
+        { text: "console.log", isCorrect: true }
     ]
 
 }
@@ -71,37 +93,37 @@ var selected = "";
 
 // Show selection for op1
 op1.addEventListener("click", () => {
-    op1.style.backgroundColor = "lightgoldenrodyellow";
-    op2.style.backgroundColor = "lightskyblue";
-    op3.style.backgroundColor = "lightskyblue";
-    op4.style.backgroundColor = "lightskyblue";
+    op1.style.backgroundColor = "darkpurple";
+    op2.style.backgroundColor = "purple";
+    op3.style.backgroundColor = "purple";
+    op4.style.backgroundColor = "purple";
     selected = op1.value;
 })
 
 // Show selection for op2
 op2.addEventListener("click", () => {
-    op1.style.backgroundColor = "lightskyblue";
-    op2.style.backgroundColor = "lightgoldenrodyellow";
-    op3.style.backgroundColor = "lightskyblue";
-    op4.style.backgroundColor = "lightskyblue";
+    op1.style.backgroundColor = "purple";
+    op2.style.backgroundColor = "darkpurple";
+    op3.style.backgroundColor = "purple";
+    op4.style.backgroundColor = "purple";
     selected = op2.value;
 })
 
 // Show selection for op3
 op3.addEventListener("click", () => {
-    op1.style.backgroundColor = "lightskyblue";
-    op2.style.backgroundColor = "lightskyblue";
-    op3.style.backgroundColor = "lightgoldenrodyellow";
-    op4.style.backgroundColor = "lightskyblue";
+    op1.style.backgroundColor = "purple";
+    op2.style.backgroundColor = "purple";
+    op3.style.backgroundColor = "darkpurple";
+    op4.style.backgroundColor = "purple";
     selected = op3.value;
 })
 
 // Show selection for op4
 op4.addEventListener("click", () => {
-    op1.style.backgroundColor = "lightskyblue";
-    op2.style.backgroundColor = "lightskyblue";
-    op3.style.backgroundColor = "lightskyblue";
-    op4.style.backgroundColor = "lightgoldenrodyellow";
+    op1.style.backgroundColor = "purple";
+    op2.style.backgroundColor = "purple";
+    op3.style.backgroundColor = "purple";
+    op4.style.backgroundColor = "darkpurple";
     selected = op4.value;
 })
 
@@ -130,7 +152,7 @@ var id = 0;
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 2) {
+if (id < 4) {
     id++;
     iterate(id);
     console.log(id);
