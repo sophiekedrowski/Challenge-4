@@ -29,6 +29,8 @@ var questions = [
     },
 
 ];
+
+//Declared variables
 var score = 0;
 var questionIndex = 0;
 var currentTime = document.querySelector("#currentTime");
@@ -57,6 +59,8 @@ timer.addEventListener("click", function () {
     populateQuestion(questionIndex);
 });
 
+
+//populating a new question everytime
 function populateQuestion(questionIndex) {
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
@@ -73,7 +77,7 @@ function populateQuestion(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
-
+//Seeing if they got the right or wrong answer
 function compare(event) {
     var element = event.target;
     if (element.matches("li")) {
@@ -90,6 +94,8 @@ function compare(event) {
     }
     questionIndex++;
 
+
+    //end of quiz function
     if (questionIndex >= questions.length) {
         allDone();
         createDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
@@ -145,6 +151,8 @@ function allDone() {
     questionsDiv.appendChild(createSubmit);
 
  
+
+    //Using local storage that we learned in class to save scores to computer.
     createSubmit.addEventListener("click", function () {
         var initials = createInput.value;
         if (initials === null) {

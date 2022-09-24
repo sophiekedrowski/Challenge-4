@@ -3,6 +3,8 @@ var clear = document.querySelector("#clear");
 var goBack = document.querySelector("#goBack");
 
 
+
+//Using local storage to save scores that were inputted
 clear.addEventListener("click", function () {
     localStorage.clear();
     location.reload();

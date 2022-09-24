@@ -19,7 +19,7 @@ n/a
 This website can be used to do a coding quiz, contains a timer and highscores posted at the end.
 
 ## Credits
-N/A
+Had help from stackoverflow as well as my wonderful partner
 
 ## License
 Please refer to the license in the repo
