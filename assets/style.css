@@ -1,31 +1,40 @@
+
+.body {
+    display: flex;
+}
+
+.header {
+display: flex;
+}
+
+
 .wrapper {
     position: absolute;
     left: 30%;
     top: 20%;
     width: 500px;
     height: 500px;
-    border: 1px solid purple;
 }
 #startTime {
-    background-color: purple;
+    background-color:rgb(66, 40, 128);
     margin-left: 33%;
     padding: 15px 32px;
     font-size: 20px;
     color: white;
 }
-.questions {
+#questionsDiv {
     margin: 20px;
+    font-size: 30px;
 }
 
-.Time {
-    float: right;
+#currentTime {
+float: right;
+font-size: 25px;
 }
 
 .goBack {
-    background-color: purple;
+    background-color:rgb(66, 40, 128);
     position: relative;
-    padding: 10px;
-    font-size: 20px;
     color: white;
     top: 30%;
     left: 55%;
@@ -37,7 +46,7 @@
 
 
 .clear {
-    background-color: purple;
+    background-color: rgb(66, 40, 128);
     position: relative;
     padding: 10px;
     font-size: 20px;
@@ -48,7 +57,7 @@
 }
 
 button {
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 textarea {
@@ -57,7 +66,7 @@ textarea {
 }
 
 #Submit {
-    background-color: purple;
+    background-color: rgb(66, 40, 128);
     margin-left: 33%;
     padding: 15px 32px;
     font-size: 20px;
@@ -67,6 +76,7 @@ textarea {
 label {
     margin-right: 10px;
 }
+
 input {
     margin-bottom: 20px;
     width: 50%;
@@ -78,12 +88,13 @@ h1 {
 }
 
 li {
-    background-color: purple;
+    background-color: rgb(66, 40, 128);
     margin-top: 10px;
     padding: 5px 15px;
     width: 80%;
     font-size: 18px;
     color: white;
+    border-radius: 5px;
 }
 
 #createDiv {
@@ -91,50 +102,4 @@ li {
     border-top: 1px solid lightgray;
 }
 
-/* Start media queries */
-/* A Media Query max-width: 786px */
-@media screen and (max-width: 786px) {
-/* Resized content to fit 786px  */
-body {
-    max-width: 786px;
-}
-/* Resized main-content to fit 786px  */
-#wrapper {
-position: absolute;
-left: 20%;
-}
 
-a {
-margin-left: 20%;
-}
-#goBack {
-    
-    position: relative;
-    left: 55%;
-}
-
-#clear {
-    
-    position: relative;
-    right: 5%;
-    
-}
-}
-
-/* A Media Query max-width: 640px */
-@media screen and (max-width: 640px) {
-/* Resized content to fit 640px  */
-body {
-    min-width: 640px;
-}
-/* Resized main-content to fit 640px  */
-#wrapper {
-position: absolute;
-left: 10%;
-}
-a {
-  margin-left: 10%;
-}
-
-
-}
