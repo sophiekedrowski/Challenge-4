@@ -8,26 +8,27 @@ display: flex;
 }
 
 
-.wrapper {
+.Navwrapper {
     position: absolute;
     left: 30%;
     top: 20%;
     width: 500px;
     height: 500px;
 }
-#startTime {
+
+.startTime {
     background-color:rgb(66, 40, 128);
     margin-left: 33%;
     padding: 15px 32px;
     font-size: 20px;
     color: white;
 }
-#questionsDiv {
+.questionsDiv {
     margin: 20px;
     font-size: 30px;
 }
 
-#currentTime {
+.currentTime {
 float: right;
 font-size: 25px;
 }
@@ -65,7 +66,7 @@ textarea {
     margin: 20px;
 }
 
-#Submit {
+.Submit {
     background-color: rgb(66, 40, 128);
     margin-left: 33%;
     padding: 15px 32px;
