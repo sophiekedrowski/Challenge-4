@@ -1,8 +1,9 @@
+
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
         choices: ["strings", "booleans", "alerts", "numbers"],
-        answer: "alerts"
+        answer: "alerts",
     },
     {
         title: "The condition in an if / else statement is enclosed within ____.",
@@ -30,58 +31,78 @@ var score = 0
 
 //This is which number in my index I am on
 var questionNumber = 0
-questionNumber++
+// questionNumber++
 
 var currentTime = document.querySelector(".currentTime");
-var timer = document.querySelector(".startTime");
+var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector(".questionsDiv");
 var Navwrapper = document.querySelector(".Navwrapper");
 var ulCreate = document.createElement("ul");
 
 
-function displayChoices(questionNumber) {
+function populateQuestion(question) {
     questionsDiv.innerHTML = "";
     ulCreate.innerHTML = "";
-    var choices = questions[questionNumber].choices
-    var question = questions[questionNumber].title
-    for (let i = 0; i < choices.length; i++) {
-        console.log(choices[i])
-        questionsDiv.textContent = userQuestion;
-    }
-    userChoices.forEach(function (newItem) {
+    var choices = question.choices
+    // console.log(choices)
+    var title = question.title
+    var answer = question.answer
+    // console.log(answer)
+    questionsDiv.textContent = title;
+
+    // for (let i = 0; i < choices.length; i++) {
+    //     // console.log(choices[i])
+    //     // questionsDiv.textContent = question;
+    // }
+    choices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionsDiv.appendChild(ulCreate);
         ulCreate.appendChild(listItem);
-        listItem.addEventListener("click", (compare));
-    },
+        listItem.addEventListener("click", function () {
 
+            if (newItem === answer) {
+                console.log("correct")
+                score += secondsLeft
+                console.log(score)
 
+            }
+            else {
+                console.log('WRONG')
+                console.log(score)
 
-// displayQuestion()
+            }
+        });
 
-// displayChoices()
+    },)
 
-//Get to display on page
+}
 
-//Get to get to post on page
+function allDone(){
+    console.log(`You SCORED --->>> ${score} POINTS!`)
+    console.log("Done with the quiz."); 
+    console.log("Add some code here to show higscores");
+    questionsDiv.innerHTML = "Fill in a highscores page here!!!!";
+    ulCreate.innerHTML = "";
 
-
-//finish quiz
-
-if (questionNumber = questions.length) {
-        allDone();
-        createDiv.textContent = "End of quiz!";
-    } else {
-        populastQuestion(questionNumber);
-    }
-    questionsDiv.appendChild(createDiv);
 }
 
 //timer
 var secondsLeft = 76;
 var holdInterval = 0;
 var penalty = 10;
+
+
+
+
+ulCreate.addEventListener("click",function (){
+    if (questionNumber <= (questions.length - 2)) {
+    populateQuestion(questions[questionNumber+1])
+    questionNumber++}
+    else{
+        allDone()
+    }
+})
 
 timer.addEventListener("click", function () {
     if (holdInterval === 0) {
@@ -96,7 +117,7 @@ timer.addEventListener("click", function () {
             }
         }, 1000);
     }
-    populateQuestion(questionIndex);
+    populateQuestion(questions[0]);
 });
 
 //Getting input from user to save thier scores
